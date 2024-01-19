@@ -1,0 +1,19 @@
+{
+  "manifest_version":3,
+  "version":"1.0",
+  "name":"Tab Closer",
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "action": {
+    "default_title": "Click Me"
+  },
+  "background": {
+    "service_worker": "service-worker.js"
+  }
+}
