@@ -1,7 +1,7 @@
 {
   "manifest_version":3,
   "version":"1.0",
-  "name":"Tab Closer",
+  "name":"Too Many Tabs",
   "permissions": [
     "tabs",
     "activeTab"
@@ -11,7 +11,7 @@
     "https://*/*"
   ],
   "action": {
-    "default_title": "Click Me"
+    "default_title": "Close Tabs"
   },
   "background": {
     "service_worker": "service-worker.js"
