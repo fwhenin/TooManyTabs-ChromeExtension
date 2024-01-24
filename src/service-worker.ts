@@ -2,6 +2,8 @@
 
 let domainsToMatch: string[] = [
   "youtube.com",
+  "npr.org",
+  "macrumors.com",
   "mail.google.com"
 ];
 
@@ -39,8 +41,14 @@ let updateBadgeText = () => {
   });
 }
 
+chrome.runtime.onStartup.addListener(
+  () => {
+    updateBadgeText();
+  }
+)
+
 chrome.action.onClicked.addListener(
-  function (activeTab) {
+  (activeTab) => {
     let currentWindowId = activeTab.windowId;
 
     chrome.tabs.query({}, function (tabs) {
@@ -66,6 +74,6 @@ chrome.action.onClicked.addListener(
   },
 );
 
-chrome.tabs.onUpdated.addListener(function(tabId,changeInfo,tab) {
+chrome.tabs.onUpdated.addListener((tabId,changeInfo,tab) => {
   updateBadgeText();
 });
