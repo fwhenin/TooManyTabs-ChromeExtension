@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack/webpack.config.js",
+    "watch": "webpack --config webpack/webpack.config.js --watch",
     "awsLogin": "aws codeartifact login --tool npm --repository cadence-npm-artifacts-QA --domain cadence --region us-east-1"
   },
   "keywords": [],

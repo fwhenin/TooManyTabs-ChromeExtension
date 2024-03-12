@@ -21,7 +21,7 @@ module.exports = {
          },
       ],
    },
-   watch: true,
+   watch: (process.argv.indexOf('--watch') > -1),
    plugins: [
       new CopyPlugin({
          patterns: [{from: ".", to: ".", context: "public"}]

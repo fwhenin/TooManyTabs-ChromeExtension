@@ -4,7 +4,8 @@ let domainsToMatch: string[] = [
   "youtube.com",
   "npr.org",
   "macrumors.com",
-  "mail.google.com"
+  "mail.google.com",
+  "theverge.com"
 ];
 
 let consolidateAllTabsToCurrentWindow = true;
